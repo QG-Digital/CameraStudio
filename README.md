@@ -39,9 +39,11 @@ Quando o botão é acionado:
 - a imagem da câmera ocupa toda a janela do aplicativo;
 - o aplicativo não ativa o modo tela cheia do sistema operacional;
 - a câmera continua funcionando normalmente;
-- a gravação e os ajustes automáticos continuam ativos caso já tenham sido iniciados.
+- a gravação continua funcionando caso já tenha sido iniciada;
+- o modo automático continua funcionando caso já esteja ativado;
+- o zoom automático continua funcionando caso já esteja ativado.
 
-Para retornar à interface normal, utilize o botão discreto **Voltar ao modo normal** exibido sobre a imagem da câmera.
+Para retornar à interface normal, utilize o botão discreto **Voltar ao modo normal**, exibido sobre a imagem da câmera.
 
 ## Requisitos
 
@@ -52,11 +54,15 @@ Para retornar à interface normal, utilize o botão discreto **Voltar ao modo no
 - O arquivo `haarcascade_frontalface_default.xml` para utilizar o acompanhamento facial e o zoom automático;
 - OBS Studio e OBS Virtual Camera, caso a câmera virtual seja utilizada.
 
-## Estrutura do projeto
+## Baixar o verificador facial
+
+Para utilizar a detecção facial, o zoom automático e o recurso **Seguir meu rosto**, baixe o arquivo necessário abaixo:
+
+[**Clique aqui para baixar o verificador facial**](https://github.com/QG-Digital/CameraStudio/releases/download/XML.Necessario/haarcascade_frontalface_default.xml )
+
+Depois de baixar o arquivo, coloque-o na mesma pasta do arquivo `camera_app.py`.
+
+O nome do arquivo deve permanecer exatamente assim:
 
 ```text
-CameraStudio/
-├── camera_app.py
-├── camera_config.json
-├── haarcascade_frontalface_default.xml
-└── requirements.txt
+haarcascade_frontalface_default.xml
