@@ -1,24 +1,56 @@
 # Camera Studio
 
-Aplicativo de câmera ao vivo desenvolvido em Python, com interface web local para ajustes de imagem, modo automático, zoom, acompanhamento facial, gravação da câmera e integração opcional com câmera virtual do OBS.
+Aplicativo de câmera ao vivo desenvolvido em Python, com interface web local para ajustes de imagem, modo automático, zoom, acompanhamento facial, gravação da câmera e integração opcional com câmera virtual do OBS Studio.
 
-## Recursos
+O Camera Studio foi criado para oferecer uma visualização simples e estável da câmera, permitindo aplicar ajustes leves em tempo real sem depender de serviços externos.
 
-O Camera Studio permite ligar a câmera diretamente pelo navegador e visualizar a imagem ao vivo em uma interface simples. O aplicativo oferece ajustes leves e instantâneos de brilho, contraste, saturação, exposição, espelhamento e zoom.
+## Funcionalidades
 
-Também é possível ativar o modo automático de iluminação. Nesse modo, o aplicativo analisa suavemente a luminosidade da imagem e ajusta brilho, contraste e exposição sem bloquear a câmera nem enviar continuamente os frames completos para o backend.
+O aplicativo permite ligar a câmera diretamente pelo navegador e visualizar a imagem ao vivo em uma interface local.
 
-O aplicativo possui zoom automático e acompanhamento facial opcionais. Quando ativados, eles utilizam o detector facial para ajudar a manter o rosto enquadrado. O comportamento normal do zoom é suave e limitado, evitando alterações bruscas, tremores e saltos repentinos entre o zoom máximo e o mínimo.
+Entre os recursos disponíveis estão:
 
-Há ainda um modo de preenchimento da câmera. Ao clicar em **Preencher câmera**, toda a interface do aplicativo desaparece e a imagem da câmera ocupa toda a janela do Camera Studio. O aplicativo não solicita o modo tela cheia do sistema. Para retornar, basta clicar em **Voltar ao modo normal**.
+- Visualização da câmera em tempo real;
+- Ajuste de brilho;
+- Ajuste de contraste;
+- Ajuste de saturação;
+- Ajuste de exposição;
+- Espelhamento horizontal da câmera;
+- Zoom manual;
+- Modo automático de iluminação;
+- Zoom automático baseado no tamanho do rosto;
+- Acompanhamento facial;
+- Gravação da imagem da câmera;
+- Salvamento das gravações na pasta `Downloads`;
+- Modo para preencher toda a janela do aplicativo com a câmera;
+- Integração opcional com a câmera virtual do OBS Studio;
+- Salvamento automático das configurações.
+
+## Modo câmera em toda a janela
+
+O botão **Preencher câmera** transforma o aplicativo em uma visualização dedicada da câmera.
+
+Quando o botão é acionado:
+
+- o cabeçalho desaparece;
+- os ajustes leves desaparecem;
+- os botões principais desaparecem;
+- a etiqueta **CÂMERA AO VIVO** desaparece;
+- a imagem da câmera ocupa toda a janela do aplicativo;
+- o aplicativo não ativa o modo tela cheia do sistema operacional;
+- a câmera continua funcionando normalmente;
+- a gravação e os ajustes automáticos continuam ativos caso já tenham sido iniciados.
+
+Para retornar à interface normal, utilize o botão discreto **Voltar ao modo normal** exibido sobre a imagem da câmera.
 
 ## Requisitos
 
 - Python 3.10 ou superior;
 - Uma câmera compatível com o sistema operacional;
-- Navegador com suporte a `getUserMedia`, como Google Chrome, Chromium, Microsoft Edge ou Firefox;
-- O arquivo do classificador facial `haarcascade_frontalface_default.xml` para utilizar o acompanhamento facial;
-- OBS Studio e OBS Virtual Camera, caso a função de câmera virtual seja utilizada.
+- Navegador compatível com a API `getUserMedia`, como Google Chrome, Chromium, Microsoft Edge ou Firefox;
+- OpenCV e NumPy para os recursos de detecção facial;
+- O arquivo `haarcascade_frontalface_default.xml` para utilizar o acompanhamento facial e o zoom automático;
+- OBS Studio e OBS Virtual Camera, caso a câmera virtual seja utilizada.
 
 ## Estrutura do projeto
 
