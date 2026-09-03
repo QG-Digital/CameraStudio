@@ -1,0 +1,16 @@
+{
+  "brightness": 19.434647899212997,
+  "contrast": 0.9093305555555555,
+  "saturation": 1.05,
+  "exposure": 0.028319517408334216,
+  "mirror": true,
+  "auto_mode": true,
+  "auto_intensity": 0.03,
+  "zoom": 1.31,
+  "auto_zoom": false,
+  "face_follow": true,
+  "face_size": 0.37,
+  "face_deadzone": 0.4,
+  "face_smoothness": 0.49,
+  "virtual_camera": false
+}
